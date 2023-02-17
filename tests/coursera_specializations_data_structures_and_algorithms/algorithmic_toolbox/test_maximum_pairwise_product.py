@@ -9,6 +9,7 @@ import sys
 
 sys.argv
 
+
 def test_maximum_pairwise_product():
     result = maximum_pairwise_product([1, 2, 3])
     assert 6 == result
