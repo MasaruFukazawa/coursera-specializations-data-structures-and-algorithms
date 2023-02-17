@@ -14,3 +14,7 @@ def test_sum():
 def test_sum_result_4():
     result = sum(2, 2)
     assert 4 == result
+
+def test_sum_result_6():
+    result = sum(2, 4)
+    assert 6 == result
