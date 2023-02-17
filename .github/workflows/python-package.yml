@@ -48,15 +48,5 @@ jobs:
       id: coverage_comment
       uses: MishaKav/pytest-coverage-comment@main
       with:
-        pytest-coverage-path: ./pytest-coverage.txt
-        junitxml-path: ./pytest.xml
-    - name: Create Coverage Badge
-      uses: schneegans/dynamic-badges-action@v1.3.0
-      with:
-        auth: ${{ secrets.COVERAGE_COMMENT_GIST }}
-        gistID: da521b4f84db14d08647e46b139dc306
-        filename: pytest-coverage-comment.json
-        label: Coverage
-        message: ${{ steps.coverage_comment.outputs.coverage }}
-        color: ${{ steps.coverage_comment.outputs.color }}
-        namedLogo: python
+        pytest-coverage-path: pytest-coverage.txt
+        junitxml-path: pytest.xml
