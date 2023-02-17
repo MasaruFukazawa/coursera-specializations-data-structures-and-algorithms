@@ -33,9 +33,11 @@ jobs:
     - name: Lint with flake8
       run: |
         python -m flake8 --ignore=E501 --count --show-source --statistics .
-    - name: type check with mypy
+    - name: src file type check with mypy
       run: |
         python -m mypy --check-untyped-defs coursera_specializations_data_structures_and_algorithms
+    - name: test file type check with mypy
+      run: |
         python -m mypy --check-untyped-defs tests
     - name: Test with pytest
       run: |
