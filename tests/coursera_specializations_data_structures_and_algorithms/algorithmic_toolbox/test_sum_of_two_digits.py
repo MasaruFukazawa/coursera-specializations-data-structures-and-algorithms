@@ -9,3 +9,6 @@ from coursera_specializations_data_structures_and_algorithms.algorithmic_toolbox
 def test_sum():
     result = sum(1, 1)
     assert 2 == result
+
+    result = sum(2, 2)
+    assert 4 == result
