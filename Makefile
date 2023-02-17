@@ -12,7 +12,7 @@ lint:
 	python -m mypy --check-untyped-defs $(TEST_DIR)
 
 test:
-	python -m pytest
+	python -m pytest --cov=$(SRC_DIR) --cov-branch  --junitxml=pytest.xml --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
 
 prepare:
 	make lint
