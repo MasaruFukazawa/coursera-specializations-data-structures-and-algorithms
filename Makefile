@@ -2,8 +2,8 @@ SRC_DIR = coursera_specializations_data_structures_and_algorithms
 TEST_DIR = tests
 
 lint:
-	python -m flake8 --ignore=E501 $(SRC_DIR)
-	python -m flake8 --ignore=E501 $(TEST_DIR)
+	python -m flake8 --ignore=E501,E741 $(SRC_DIR)
+	python -m flake8 --ignore=E501,E741 $(TEST_DIR)
 	python -m black $(SRC_DIR)
 	python -m black $(TEST_DIR)
 	python -m isort $(SRC_DIR)
