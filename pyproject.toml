@@ -15,6 +15,7 @@ black = "^23.1.0"
 flake8 = "^6.0.0"
 pytest-cov = "^4.0.0"
 ipython = "^8.10.0"
+bandit = "^1.7.4"
 
 
 [tool.isort]

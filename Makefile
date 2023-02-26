@@ -10,6 +10,7 @@ lint:
 	python -m isort $(TEST_DIR)
 	python -m mypy --check-untyped-defs $(SRC_DIR)
 	python -m mypy --check-untyped-defs $(TEST_DIR)
+	python -m bandit -r $(SRC_DIR)
 
 test:
 	python -m pytest --cov=$(SRC_DIR) --cov-branch  --junitxml=pytest.xml --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
