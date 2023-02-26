@@ -41,7 +41,7 @@ jobs:
       uses: isort/isort-action@v1.0.0
     - name: Check files using the black formatter
       uses: rickstaa/action-black@v1
-    - name: src file type check with mypy
+    - name: src vulnerability Check with bandit
       run: |
         python -m bandit -r coursera_specializations_data_structures_and_algorithms
     - name: Test with pytest
